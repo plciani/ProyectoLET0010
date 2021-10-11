@@ -1,0 +1,18 @@
+---
+title: "Preguntas Iniciales"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+1.¿Cómo varía el total de atenciones de urgencia en cada semana?,¿Hay alguna tendecia marcada para cada época del año?
+
+2.¿Cuáles son las principales causas de atenciones de urgencia para cada grupo etario?
+
+3.¿Que diferencias existen en los tipos de atenciones de urgencia por región?,¿Hay grandes diferencias entre comunas rurales y urbanas?
+
+4.¿Cuáles son las principales atenciones de urgencia por tipo de establecimiento de salud?
+
+5.¿Cómo varían las causas de atenciones de urgencia en una misma región acorde al ingreso?
