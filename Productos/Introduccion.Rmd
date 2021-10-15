@@ -1,0 +1,16 @@
+---
+title: "Introducción"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Las atenciones de urgencia o emergencia vital se definen según la Superintendencia de Salud como toda condición clínica que implique un riesgo de muerte o de un efecto funcional grave, esta atención ante tales consecuencias debe ser inmediata e impostergable. Por consiguiente, ninguna Institución de salud puede negarle a un paciente la atención rápida y efectiva a una emergencia de carácter vital.
+
+Si bien estas son las prácticas deseadas, en la realidad esto se vuelve un poco más complejo. En los últimos años se ha ido normalizando el término colapso en los servicios de urgencia, ya sea por períodos muy marcados de enfermades respiratorias o por la pandemia en últimos años. Sin embargo, no hay una definición muy clara sobre lo que entendemos por colapso. ¿Muere gente sin ser atendida? ¿No hay insumos para realizar una buena atención? ¿No hay personal? ¿Mucho tiempo de espera? Darles una respuesta a estas interrogantes pareciera ser nuestro primer paso para buscar una mejora, pero debemos entender que no hay una solución fácil, incluso en países OCDE con mejores índices de salud existe un problema con los tiempos de atención. "(Agregar Fuente)"
+
+El siguiente informe tiene por objetivo entender cómo han funcionado las atenciones de urgencia en los últimos años en Chile, con datos obtenidos directamente del Ministerio de Salud, de modo de generar una primera visualización de cómo opera cada establecimiento médico, según su tipo, ubicación, ingreso y población. Para ello emplearemos diferentes metodologías de Regresión lineal, explicando en cada paso los supuestos teóricos y técnicas que lo sustentan.
+
+El informe se organizará en tres secciones. En el siguiente apartado encontraremos la definición del contexto del problema, respondiendo algunas preguntas iniciales según informes ya realizados y poniendo en ambiente todas las variables que tomaremos en cuenta. El segundo apartado contendrá todo el marco teórico y las diferentes variables que tomaremos en cuenta. Finalmente, se entregarán las conclusiones de las primeras visualizaciones, de manera que sirvan como recomendaciones para tener en cuenta sobre cómo operan los Servicios de Salud.
