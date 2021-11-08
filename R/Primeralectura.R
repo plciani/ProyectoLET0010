@@ -31,7 +31,7 @@ test1=rio::import("Data/AtencionesUrgencia2014.xlsx") %>%
 
 datosfinales2=test1
 ggplot()+
-  xlim(0,55)+
+  xlim(0,60)+
   ylim(0,180000)+
   geom_line(aes(datosfinales2$rowid[0:25],datosfinales2$`TOTAL CAUSAS SISTEMA RESPIRATORIO`[0:25]))+
   geom_line(aes(datosfinales2$rowid[25:38],datosfinales2$`TOTAL CAUSAS SISTEMA RESPIRATORIO`[25:38]),color="#56B4E9")+
