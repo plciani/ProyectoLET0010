@@ -16,7 +16,7 @@ library(dplyr)
 Una de las principales causas de las atenciones de urgencia en nuestro país son las enfermedades respiratorias, estas enfermedades afectan directamente los pulmones y derivados del aparato respiratorio. El Ministerio de Salud clasifica estas condiciones en Infecciones respiratorias altas, Influenza, Neumonía, Bronquitis, Crisis obstructiva y Causas generales. En la siguiente figura se muestran los casos totales de causas atribuídas al sistema respiratorio de todos los establecimientos de salud del país por cada semana del año 2014.
 
 ```{r out.width="80%",fig.align="center",echo=FALSE}
-knitr::include_graphics(here::here("Plots/UrgenciasSistemaRespiratorio2014-3.jpeg"))
+knitr::include_graphics(here::here("Plots/UrgenciasSistemaRespiratorio20143.jpeg"))
 
 ```
 
