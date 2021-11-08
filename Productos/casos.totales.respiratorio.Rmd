@@ -1,0 +1,25 @@
+---
+title: "Atenciones Urgencia atribuídas al Sistema Respiratorio"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(ggthemes)
+library(ggrepel)
+library(dplyr)
+
+
+```
+
+Una de las principales causas de las atenciones de urgencia en nuestro país son las enfermedades respiratorias, estas enfermedades afectan directamente los pulmones y derivados del aparato respiratorio. El Ministerio de Salud clasifica estas condiciones en: Infecciones respiratorias altas, Influenza, Neumonía, Bronquitis, Crisis obstructiva y Causas generales. En la siguiente figura se muestran los casos totales de causas atribuídas al sistema respiratorio de todos los establecimientos de salud del país por cada semana del año 2014.
+
+```{r out.width="80%",fig.align="center",echo=FALSE}
+knitr::include_graphics(here::here("Plots/UrgenciasSistemaRespiratorio2014-3.jpeg"))
+
+```
+
+En primera instancia es observable que las causas totales tienen su valor máximo en las últimas semanas de otoño y las primeras semanas de invierno, además es posible que los casos totales de causas atribuídas al sistema respiratorio posean una distribución téorica conocida, de manera que a continuación nos encofocaremos en proponer un modelo que nos ayude a estimar un valor máximo esperado de las causas totales, lo que nos ayudaría a establecer un intervalo de confianza, con el fin de prevenir futuros colapsos en el sistema de urgencias.
+
+
