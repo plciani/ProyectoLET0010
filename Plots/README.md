@@ -1,5 +1,5 @@
 # ProyectoLET0010
 Proyecto LET0010
 
-Se Agrega primera figura sobre la distribución de las Urgencias por causas atribuídas al sistema respiratorio, año 2014.
-Se agregan dos nuevas figuras, las dos con mejoras de la figura original sobre la distribucion de las urgencias por causas atribuídas al sistema respiratorio, año 2014.
+Se agrega primera figura sobre la distribuciÃ³n de las Urgencias por causas atribuÃ­das al sistema respiratorio, aÃ±o 2014.
+Se agregan dos nuevas figuras, las dos con mejoras de la figura original sobre la distribucion de las urgencias por causas atribuÃ­das al sistema respiratorio, aÃ±o 2014.
