@@ -1,0 +1,61 @@
+---
+title: "Avance"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(ggthemes)
+library(ggrepel)
+library(dplyr)
+
+
+```
+
+# Introducción
+
+
+Las atenciones de urgencia o emergencia vital se definen según la Superintendencia de Salud como toda condición clínica que implique un riesgo de muerte o de un efecto funcional grave. Debido a que esta atención debe ser inmediata e impostergable, ninguna Institución de salud puede negarle a un paciente un servicio rápido y efectivo ante una emergencia de carácter vital.
+
+Si bien estas son las prácticas deseadas, en la realidad esto se vuelve un poco más complejo. En los últimos años se ha ido normalizando el término "colapso" en los servicios de urgencia, ya sea por períodos muy marcados de enfermedades respiratorias o por la pandemia en últimos años. Sin embargo, no hay una definición muy clara sobre lo que entendemos por colapso. ¿Muere gente sin ser atendida? ¿No hay insumos para realizar una buena atención? ¿No hay personal? ¿Hay mucho tiempo de espera? Darle una respuesta a estas interrogantes pareciera ser nuestro primer paso para buscar una mejora. De todos modos debemos entender que no hay una solución fácil, ya que incluso en países OCDE con mejores índices de salud existe un problema con los tiempos de atención. "(Agregar Fuente)"
+
+Con el fin de entender mejor esta problemática el siguiente informe tiene por objetivo comprender cómo han funcionado las atenciones de urgencia en los últimos años en Chile, con datos obtenidos directamente del Ministerio de Salud, de modo de generar una primera visualización de cómo opera cada establecimiento médico, según su tipo, ubicación, ingreso y población. Para ello emplearemos diferentes metodologías de regresión lineal, explicando en cada paso los supuestos teóricos y técnicas que lo sustentan.
+
+El informe se organizará en tres secciones. En el siguiente apartado encontraremos la definición del contexto del problema, respondiendo algunas preguntas iniciales según informes ya realizados y poniendo en ambiente todas las variables que tomaremos en cuenta. El segundo apartado contendrá todo el marco teórico y las diferentes variables que tomaremos en cuenta. Finalmente, se entregarán las conclusiones de las primeras visualizaciones, de manera que sirvan como recomendaciones para tener en cuenta sobre cómo operan los Servicios de Salud.(Modificar Carta de navegación, debe ser explícita para los temas que se abordan)
+
+# Contexto problema
+
+En Chile la Red de Urgencia está compuesto por establecimientos de atención y servicios donde se brinda directamente la atención de salud, es decir, los establecimientos de Atención Primaria de Urgencia (SAPU, SAR, SUR), Unidades de Emergencia Hospitalaria (UEH), Unidades de hospitalización de Pacientes Críticos (UPC).
+Según datos del Ministerio de Salud (Agregar FUENTE IBS 2018), en el año 2018 más del 42% de las atenciones médicas en Chile fueron realizadas en alguno de los establecimientos de la Red de Urgencia, ya sea hospitalarios o establecimientos de atención temprana. Una cifra bastante alarmante, ya que, si tomamos en cuenta una población estimada de 19 millones, obtenemos una tasa de utilización de la red de urgencia de 104 atenciones por cada 100 habitantes por año.
+En la siguiente figura se muestran los resultados de un estudio de la Organización de Colaboración y Desarrollo Económico (Agregar FUENTE) del año 2015, en donde se hace una comparación entre países en relación con sus tasas de visitas a urgencias por cada 100 habitantes.
+
+```{r out.width="80%",fig.align="center",echo=FALSE}
+knitr::include_graphics(here::here("Plots/TasaUrgenciasOCDE2015.jpg"))
+
+```
+(Mejorar imageen, agregar fuente)
+
+Es observable que Chile se sitúa como el tercer país con mayor tasa de consultas de urgencia con una tasa de 57,1 consultas en las Unidades de Emergencia Hospitalarias por cada 100 habitantes, mientras que la media es de 308.
+Tomando en cuenta los últimos Indicadores Básicos de Salud publicados por el Ministerio de Salud, es visible que las atenciones de urgencia han superado de manera progresiva a las atenciones otorgadas por la red primaria de salud, una situación alarmante si nuestro objetivo es un sistema de salud de carácter preventivo con énfasis en las redes primarias de salud.
+
+# Base de datos
+
+
+
+
+
+
+
+
+
+# Enfermades respiratorias
+
+Una de las principales causas de las atenciones de urgencia en nuestro país son las enfermedades respiratorias, estas enfermedades afectan directamente los pulmones y derivados del aparato respiratorio. El Ministerio de Salud clasifica estas condiciones en Infecciones respiratorias altas, Influenza, Neumonía, Bronquitis, Crisis obstructiva y Causas generales. En la siguiente figura se muestran los casos totales de causas atribuídas al sistema respiratorio de todos los establecimientos de salud del país por cada semana del año 2014.
+
+```{r out.width="80%",fig.align="center",echo=FALSE}
+knitr::include_graphics(here::here("Plots/UrgenciasSistemaRespiratorio20143.jpeg"))
+
+```
+
+En primera instancia es observable que las causas totales tienen su valor máximo en las últimas semanas de otoño y las primeras semanas de invierno, además es posible que los casos totales de causas atribuídas al sistema respiratorio posean una distribución téorica conocida, de manera que a continuación nos encofocaremos en proponer un modelo que nos ayude a estimar un valor máximo esperado de las causas totales, lo que nos ayudaría a establecer un intervalo de confianza, con el fin de prevenir futuros colapsos en el sistema de urgencias.
