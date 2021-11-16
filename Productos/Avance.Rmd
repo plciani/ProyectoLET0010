@@ -39,8 +39,11 @@ knitr::include_graphics(here::here("Plots/TasaUrgenciasOCDE2015.jpg"))
 Es observable que Chile se sitúa como el tercer país con mayor tasa de consultas de urgencia con una tasa de 57,1 consultas en las Unidades de Emergencia Hospitalarias por cada 100 habitantes, mientras que la media es de 308.
 Tomando en cuenta los últimos Indicadores Básicos de Salud publicados por el Ministerio de Salud, es visible que las atenciones de urgencia han superado de manera progresiva a las atenciones otorgadas por la red primaria de salud, una situación alarmante si nuestro objetivo es un sistema de salud de carácter preventivo con énfasis en las redes primarias de salud.
 
-# Base de datos
-
+# Data
+Nuestra base de datos se compone de las atenciones de urgencia por semana estadísticas desde el año 2014 al 2020. Todas estas bases fueron obtenidas directamente del Departamento de Estadísticas e Información de Salud. **(Link)**
+Estas bases de datos contienen información detallada sobre las urgencias ocurridas en cada semana estadística, es decir se compone de cuatro variables cuantitativas principales: Total Causas Sistema Respiratorio, Total Causas Sistema Circulatorio, Diarrea Aguda y Total demás Causas. Nuestra base también posee variables cuantitativas secundarias correspondientes a las diferentes causas de las variables principales.
+Además de nuestras bases de datos tenemos a disposición los informes de los Indicadores Basicos de Salud 2018, Final de Evalución del Gasto Institucional de la Red de Urgencia del Ministerio de Salud 2016 y Emergency Care Services de la OCDE, año 2015.
+**(Buena idea expresar variables en tablas)**
 
 
 # Evolucion 2014-2019
