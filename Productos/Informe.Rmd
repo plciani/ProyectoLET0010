@@ -1,5 +1,5 @@
 ---
-title: "Informe de las entradas a urgencia en nuestro país entre los años 2014 y 2020"
+title: "Informe de las entradas a urgencia en nuestro país entre los años 2014 y 2020."
 output: html_document
 ---
 
@@ -19,35 +19,35 @@ library(dplyr)
 
 Las atenciones de urgencia o emergencia vital se definen según la Superintendencia de Salud como toda condición clínica que implique un riesgo de muerte o de un efecto funcional grave. Debido a que esta atención debe ser inmediata e impostergable, ninguna Institución de salud puede negarle a un paciente un servicio rápido y efectivo ante una emergencia de carácter vital.
 
-Si bien estas son las prácticas deseadas, en la realidad esto se vuelve un poco más complejo. En los últimos años se ha normalizado el término "colapso" en los servicios de urgencia, ya sea por períodos muy marcados de enfermedades respiratorias o por la pandemia en últimos años. Sin embargo, no hay una definición muy clara sobre lo que entendemos por colapso. ¿Muere gente sin ser atendida? ¿No hay insumos para realizar una buena atención? ¿No hay personal? ¿Hay mucho tiempo de espera? Darle una respuesta a estas interrogantes pareciera ser nuestro primer paso para buscar una mejora. De todos modos, debemos entender que no hay una solución fácil, ya que incluso en países de la Organización para la Cooperación y el Desarrollo Económicos (OCDE), que cuentan con los mejores índices de salud, aún existen problemas con las atenciones de urgencia.**(1)**.
+Si bien estas son las prácticas deseadas, en la realidad esto se vuelve un poco más complejo. En los últimos años se ha normalizado el término "colapso" en los servicios de urgencia, ya sea por períodos muy marcados de enfermedades respiratorias o por la pandemia en últimos años. Sin embargo, no hay una definición muy clara sobre lo que entendemos por colapso. ¿Muere gente sin ser atendida? ¿No hay insumos para realizar una buena atención? ¿No hay personal? ¿Hay mucho tiempo de espera? Darles una respuesta a estas interrogantes pareciera ser nuestro primer paso para buscar una mejora. De todos modos, debemos entender que no hay una solución fácil, ya que incluso en países de la Organización para la Cooperación y el Desarrollo Económicos (OCDE), que cuentan con los mejores índices de salud, aún existen problemas con las atenciones de urgencia. **(1)**.
 
 Con el fin de entender mejor esta problemática, el siguiente informe tiene por objetivo comprender cómo han funcionado las atenciones de urgencia en los últimos años en Chile. Esto se realizará través de un análisis descriptivo con datos obtenidos directamente del Ministerio de Salud. De este modo, se busca generar una primera visualización de cómo ha afectado la llegada de la primera ola de covid-19 en nuestro sistema de urgencias, para esto tomaremos como base el año 2014, un año promedio sin grandes anormalidades.
 
-El informe se organizará en cuatro secciones. En el siguiente apartado encontraremos la definición del contexto del problema, en donde definiremos conceptos básicos sobre nuestra red de urgencias y los pondremos en un  contexto internacional. El segundo apartado contendrá todo el marco teórico y bases de datos que tomaremos en cuenta. El tercer apartado contempla todos los resultados obtenidos. Estos resultados comenzarán desde un contexto general y se desarrollarán a uno más específico. Finalmente, se entregarán las conclusiones de los resultados obtenidos, de manera que sirvan como recomendaciones para tener en cuenta sobre cómo opera los red de urgencias en nuestro país.
+El informe se organizará en cuatro secciones. En el siguiente apartado encontraremos la definición del contexto del problema, en donde definiremos conceptos básicos sobre nuestra red de urgencias y los pondremos en un contexto internacional. El segundo apartado contendrá todo el marco teórico y bases de datos que tomaremos en cuenta. El tercer apartado contempla todos los resultados obtenidos. Estos resultados comenzarán desde un contexto general y se desarrollarán a uno más específico. Finalmente, se entregarán las conclusiones de los resultados obtenidos, de manera que sirvan como recomendaciones para tener en cuenta sobre cómo opera la red de urgencias en nuestro país.
 
 
 # **Antecedentes**
 
 En Chile la Red de Urgencia está compuesta por establecimientos de atención y servicios donde se brinda directamente la atención de salud. Esta red comprende los establecimientos de Atención Primaria de Urgencia (SAPU, SAR, SUR), Unidades de Emergencia Hospitalaria (UEH), Unidades de hospitalización de Pacientes Críticos (UPC).
-Según el Índice Básico de Salud del Ministerio de Salud **(2)**, en el año 2014 más del 45% de las atenciones médicas en Chile fueron realizadas en alguno de los establecimientos de la Red de Urgencia, ya sea hospitalarios o establecimientos de atención temprana. Esta es una cifra bastante alarmante, ya que, si tomamos en cuenta una población estimada de 19 millones, obtenemos una tasa de utilización de la red de urgencia de 101 atenciones por cada 100 habitantes por año. Una tasa muy por sobre la de otros países, como por ejemplo la ciudad de Bogotá, Colombia con una tasa de 77,2 atenciones por cada 100 habitantes**(3)**.
+Según el Índice Básico de Salud del Ministerio de Salud **(2)**, en el año 2014 más del 45% de las atenciones médicas en Chile fueron realizadas en alguno de los establecimientos de la Red de Urgencia, ya sea hospitalarios o establecimientos de atención temprana. Esta es una cifra bastante alarmante, ya que, si tomamos en cuenta una población estimada de 19 millones, obtenemos una tasa de utilización de la red de urgencia de 101 atenciones por cada 100 habitantes por año. Una tasa muy por sobre la de otros países, como por ejemplo la ciudad de Bogotá, Colombia con una tasa de 77,2 atenciones por cada 100 habitantes **(3)**.
 En la siguiente figura pondremos en contexto internacional estas tasas, esta figura fue recuperada de un estudio de la Organización de Colaboración y Desarrollo Económico **(1)** del año 2015, en donde se hace una comparación entre países, en relación con sus tasas de visitas a urgencias hospitalarias por cada 100 habitantes.
 
 ```{r out.width="100%",fig.align="center",echo=FALSE}
 knitr::include_graphics(here::here("Plots/FiguraOCDEHD.png"))
 
 ```
-En el gráfico anterior se puede observar que Chile se sitúa en tercer lugar, con una tasa de tasa de 57,1 consultas en las Unidades de Emergencia Hospitalarias por cada 100 habitantes, mientras que la media es de 30,8. Además si tomamos en cuenta los últimos Indicadores Básicos de Salud publicados por el Ministerio de Salud, es visible que las atenciones de urgencia han superado de manera progresiva a las atenciones otorgadas por la red primaria de salud, una situación alarmante si nuestro objetivo es un sistema de salud de carácter preventivo con énfasis en las redes primarias.
+En el gráfico anterior se puede observar que Chile se sitúa en tercer lugar, con una tasa de tasa de 57,1 consultas en las Unidades de Emergencia Hospitalarias por cada 100 habitantes, mientras que la media es de 30,8. Además si tomamos en cuenta los últimos Indicadores Básicos de Salud publicados por el Ministerio de Salud **(2)**, es visible que las atenciones de urgencia han superado de manera progresiva a las atenciones otorgadas por la red primaria de salud, una situación alarmante si nuestro objetivo es un sistema de salud de carácter preventivo con énfasis en las redes primarias.
 
 Esta sobrecarga en la red de urgencias podría tener efectos muy adversos, ya que ante cualquier emergencia que aumente las atenciones de urgencia de manera imprevista, el sistema podría colapsar. Este colapso tendría consecuencias gravísimas para nuestra red de salud, puesto que no solo se dificultaría el acceso a la red de urgencias para enfrentar dicha emergencia, sino que además disminuirían todas las atenciones, lo que podría causar un aumento en la mortalidad y morbilidad. Estos efectos se han observado en epidemias pasadas, como por ejemplo el brote de SARS-CoV el año 2003 en China. En este fenómeno se observó una disminución de todas las atenciones en los servicios de urgencia de un 43% **(4)**.
 
 # **Metodología y datos**
-Nuestra base de datos se compone de las atenciones de urgencia por semana estadística desde el año 2014 al 2020. Todas estas bases fueron obtenidas directamente del Departamento de Estadísticas e Información de Salud. **(5)**
+Nuestra base de datos se compone de las atenciones de urgencia por semana estadística desde el año 2014 al 2020. Todas estas bases fueron obtenidas directamente del Departamento de Estadísticas e Información de Salud **(5)**.
 Estas bases de datos contienen información detallada sobre las urgencias ocurridas en cada semana estadística, es decir se compone de cuatro variables cuantitativas principales: Total Causas Sistema Respiratorio, Total Causas Sistema Circulatorio, Diarrea Aguda y Total demás Causas. Nuestra base también posee variables cuantitativas secundarias correspondientes a las diferentes causas de las variables principales.
 Además de nuestras bases de datos tenemos a disposición los informes de los "Indicadores Basicos de Salud", año 2014 y "Emergency Care Services de la OCDE", año 2015.
 
-Para realizar el informe se utilizaron los software RStudio y Excel. En Rstudio se realizó un análisis descriptivo, en el que se cruzaron las bases de datos de los diferentes años.
+Para realizar el informe se utilizaron los softwares RStudio y Excel. En Rstudio se realizó un análisis descriptivo, en el que se cruzaron las bases de datos de los diferentes años.
 
-A continuación se expresan dos tablas con las principales variables obtenidas del cruce de las bases de datos, con sus 3 primeras filas de un total de 366 y 265 respectivamente.
+A continuación, se expresan dos tablas con las principales variables obtenidas del cruce de las bases de datos, con sus 3 primeras filas de un total de 366 y 265 respectivamente.
 
 |SEMANA ESTADÍSTICA|TOTAL ATENCIONES DE URGENCIA|TOTAL CAUSAS SISTEMA RESPIRATORIO|TOTAL CAUSAS SISTEMA CIRCULATORIO|TOTAL INFARTO AGUDO MIOCARDIO|TOTAL ACCIDENTE VASCULAR ENCEFÁLICO|Año|
 |-------|---------|---------|---------|---------|---------|---------|
@@ -64,22 +64,22 @@ A continuación se expresan dos tablas con las principales variables obtenidas d
 Estas tablas serán usadas en la posterior generación de gráficos de líneas y de áreas apiladas, las cuáles serán de gran utilidad para poder visualizar nuestras problemáticas.
 
 # **Resultados**
-Para comenzar a visualizar nuestras problemáticas sería muy conveniente partir de un contexto general a uno más en particular. De este modo, nos encofaremos en una primera parte en comprender cómo se han comportado el total de las entradas a urgencia entre el año 2014 y el 2020. Luego, visualizaremos la composición que tienen estas llegadas, con la intención de comprender cu comportamiento y cómo se han visto afectadas en los últimos años.
+Para comenzar a visualizar nuestras problemáticas sería muy conveniente partir de un contexto general a uno más en particular. De este modo, nos enfocaremos en una primera parte en comprender cómo se han comportado el total de las entradas a urgencia entre el año 2014 y el 2020. Luego, visualizaremos la composición que tienen estas llegadas, con la intención de comprender su comportamiento y cómo se han visto afectadas en los últimos años.
 
 ### Evolución llegadas a urgencia entre los años 2014 y 2020.
 
-Para comprender cómo se han comportado las entradas a urgencia en los últimos años de manera representativa, es necesario tomar como muestra un período lo más heterogeneo posible. En los últimos años hemos tenido años con enfermedades que han afectado fuertemente nuestro sistema de salud, así como también años sin grandes eventualidades. En la siguiente figura contrastaremos el comportamiento de las entradas a urgencia por semana estadística en los años comprendidos entre 2014 a 2020.
+Para comprender cómo se han comportado las entradas a urgencia en los últimos años de manera representativa, es necesario tomar como muestra un período lo más heterogéneo posible. En los últimos años hemos tenido años con enfermedades que han afectado fuertemente nuestro sistema de salud, así como también años sin grandes eventualidades. En la siguiente figura contrastaremos el comportamiento de las entradas a urgencia por semana estadística en los años comprendidos entre 2014 a 2020.
 ```{r out.width="100%",fig.align="center",echo=FALSE}
 knitr::include_graphics(here::here("Plots/TotalAtencionesHD.png"))
 
 ```
-Como podemos observar, las entradas a urgencia tienen un comportamiento muy similar en los años 2014 al 2019. Destacan entre ellas los valores máximos en los años 2019 y 2015, correspondientes a temporadas fuertes de influenza en nuestro país. Además de la figura es posible advertir la abrupta disminución del total de atenciones de urgencia en el año 2020, en consecuencia de la primera ola de covid-19.
+Como podemos observar, las entradas a urgencia tienen un comportamiento muy similar en los años 2014 al 2019. Destacan entre ellas los valores máximos en los años 2019 y 2015, correspondientes a temporadas fuertes de influenza en nuestro país. Además de la figura es posible advertir la abrupta disminución del total de atenciones de urgencia en el año 2020, en consecuencia, de la primera ola de covid-19.
 
-La primera ola de covid-19 ocurrida en nuestro país el año 2020 tuvo efectos severos en las atenciones de urgencias. El primer caso diagnósticado fue informado el día 3 de Marzo, el primer muerto por covid-19 el día 21 marzo y el inicio de cuarentenas en todo el territorio el día 26 de marzo, es decir en un período de 3 semanas pasamos de tener un total de atenciones de urgencia promedio a un total colapso en los sistemas de salud. En consecuencia, pasamos de tener un promedio del total de atenciones de urgencia entre los años 2014 y 2019 de 17399416 por año a tener 11589338 en 2020, es decir un 33% menos.
+La primera ola de covid-19 ocurrida en nuestro país el año 2020 tuvo efectos severos en las atenciones de urgencias. El primer caso diagnosticado fue informado el día 3 de marzo, el primer muerto por covid-19 el día 21 marzo y el inicio de cuarentenas en todo el territorio el día 26 de marzo, es decir en un período de 3 semanas pasamos de tener un total de atenciones de urgencia promedio a un total colapso en los sistemas de salud. Así pues, pasamos de tener un promedio del total de atenciones de urgencia entre los años 2014 y 2019 de 17.399.416 por año a tener 11.589.338 en 2020, es decir, un 33% menos.
 
 ### Composición de las llegadas a urgencias 2014
 
-En consecuencia de lo anterior, sería de gran utilidad conocer cuáles son los principales componentes de las entradas a urgencia. Para esto tomaremos un año sin grandes eventualidades como el año 2014, con el fin de visualizar la proporción que toma cada una de las causas de las entradas a urgencia en un año normal. La siguiente figura nos muestra un gráfico de áreas apiladas con las principales causas.
+En consecuencia con lo anterior, sería de gran utilidad conocer cuáles son los principales componentes de las entradas a urgencia. Para esto tomaremos un año sin grandes eventualidades como el año 2014, con el fin de visualizar la proporción que toma cada una de las causas de las entradas a urgencia en un año normal. La siguiente figura nos muestra un gráfico de áreas apiladas con las principales causas.
 
 ```{r out.width="100%",fig.align="center",echo=FALSE}
 knitr::include_graphics(here::here("Plots/AreasApiladasHD.png"))
@@ -88,23 +88,23 @@ knitr::include_graphics(here::here("Plots/AreasApiladasHD.png"))
 
 ### Sistema respiratorio
 
-Del gráfico anterior es posible advertir que una de las principales causas de las atenciones de urgencia en nuestro país son las enfermedades respiratorias, es decir, aquellas que afectan directamente los pulmones y derivados del aparato respiratorio. El Ministerio de Salud clasifica estas condiciones en Infecciones respiratorias altas, Influenza, Neumonía, Bronquitis, Crisis obstructiva y Causas generales. En la siguiente figura se muestran los casos totales de causas atribuídas al sistema respiratorio de todos los establecimientos de salud del país por cada semana del año 2014.
+Del gráfico anterior es posible advertir que una de las principales causas de las atenciones de urgencia en nuestro país son las enfermedades respiratorias, es decir, aquellas que afectan directamente los pulmones y derivados del aparato respiratorio. El Ministerio de Salud clasifica estas condiciones en Infecciones respiratorias altas, Influenza, Neumonía, Bronquitis, Crisis obstructiva y Causas generales. En la siguiente figura se muestran los casos totales de causas atribuidas al sistema respiratorio de todos los establecimientos de salud del país por cada semana del año 2014.
 
 ```{r out.width="100%",fig.align="center",echo=FALSE}
 knitr::include_graphics(here::here("Plots/SistemaRespiratorioHD.png"))
 
 ```
 
-Es visible que las causas totales de entradas a urgencia por causas atribuídas al sistema respiratorio tienen su valor máximo en las últimas semanas de otoño y las primeras semanas de invierno. En consecuencia, es de esperar que el peak de entradas a urgencia en un año sin grandes eventualidades se de entre las semanas 20 y 40.
+Es visible que las causas totales de entradas a urgencia por causas atribuidas al sistema respiratorio tienen su valor máximo en las últimas semanas de otoño y las primeras semanas de invierno. En consecuencia, es de esperar que el valor máximo de entradas a urgencia en un año sin grandes eventualidades se dé entre las semanas 20 y 40.
 
 
 ### Sistema Circulatorio
-Además del gráfico de áreas apiladas, es observable que las causas atribuídas al sistema circulatorio no corresponden a una gran proporción del total de atenciones a urgencia. Sin embargo, según el Índice Básico de Salud del Ministerio de Salud **(2)**, las enfermedades cardiovasculares como los síndromes al miocardio agudo y los accidentes vasculares ocupan los primeros puestos de mortalidad, con una tasa de 150,38 muertes por cada 100.000 habitantes. La siguiente figura nos evidencia la evolución por semana estadística de las atenciones de urgencia por causas atribuídas al sistema circulatorio entre los años 2014 y 2020.
+Además del gráfico de áreas apiladas, es observable que las causas atribuidas al sistema circulatorio no corresponden a una gran proporción del total de atenciones a urgencia. Sin embargo, según el Índice Básico de Salud del Ministerio de Salud **(2)**, las enfermedades cardiovasculares como los síndromes al miocardio agudo y los accidentes vasculares ocupan los primeros puestos de mortalidad, con una tasa de 150,38 muertes por cada 100.000 habitantes. La siguiente figura nos evidencia la evolución por semana estadística de las atenciones de urgencia por causas atribuidas al sistema circulatorio entre los años 2014 y 2020.
 ```{r out.width="100%",fig.align="center",echo=FALSE}
 knitr::include_graphics(here::here("Plots/SistemaCirculatorioHD.png"))
 
 ```
-De la figura anterior es observable que las llegadas a urgencia por causas atribuídas al sistema circulatorio se mantuvo con valores similares entre los años 2014 y 2019. Sin embargo, en el año de 2020 a raíz de la llegada de la primera ola de Covid-19 a nuestro país, se visualiza una caída muy abrupta en las atenciones de urgencia. Esto podría tener una incidencia en que enfermedades con un gran indice de mortalidad, se hayan dejado de atender. De manera de visualizar esto, en las próximas figuras evaluaremos la evolución por semana estadística de las urgencias atribuídas por accidentes cardiovasculares e Infarto agudo al miocardio.
+De la figura anterior es observable que las llegadas a urgencia por causas atribuidas al sistema circulatorio se mantuvieron con valores similares entre los años 2014 y 2019. Sin embargo, en el año de 2020 a raíz de la llegada de la primera ola de Covid-19 a nuestro país, se visualiza una caída muy abrupta en las atenciones de urgencia. Esto podría tener una incidencia en que enfermedades con un gran índice de mortalidad, se hayan dejado de atender. De manera de visualizar esto, en las próximas figuras evaluaremos la evolución por semana estadística de las urgencias atribuidas por accidentes cardiovasculares e Infarto agudo al miocardio.
 
 ```{r out.width="100%",fig.align="center",echo=FALSE}
 knitr::include_graphics(here::here("Plots/AccidenteVascularHD.png"))
@@ -114,33 +114,33 @@ knitr::include_graphics(here::here("Plots/InfartosHD.png"))
 
 
 ```
-Tal como lo habíamos supuesto en la figura anterior, el efecto en la caída en las urgencias atribuídas a las enfermedades cardiovasculares se traslada a las urgencias por accidentes cardiovasculares. En consecuencia, se dejaron de atender un promedio del 21% del total de atenciones de urgencia atribuídas a los accidentes vasculares entre las semanas 12 y 25. Por otra parte, no se observaron disminuciones en las atenciones de urgencia atribuídas a infartos agudos al miocardio.
+Tal como lo habíamos supuesto en la figura anterior, el efecto en la caída en las urgencias atribuidas a las enfermedades cardiovasculares se traslada a las urgencias por accidentes cardiovasculares. En consecuencia, se dejaron de atender un promedio del 21% del total de atenciones de urgencia atribuidas a los accidentes vasculares entre las semanas 12 y 25. Por otra parte, no se observaron disminuciones en las atenciones de urgencia por infartos agudos al miocardio.
 
 A partir de los resultados obtenidos, se reportan los siguientes hallazgos:
 
-- Nuestra red de urgencias presenta un nivel de ocupación muy por encima del objetivo, lo que tendría como consecuencia que ante cualquier evento inusual, nuestro sistema tendería a colapsar.
+- Nuestra red de urgencias presenta un nivel de ocupación muy por encima del objetivo, lo que tendría como consecuencia que, ante cualquier evento inusual, nuestro sistema tendería a colapsar.
  
 - La llegada del covid-19 a nuestro país generó un colapso en nuestra red de urgencias el año 2020.
 
-- En un año normal la composición de las llegadas a urgencia se componen de 5 causas generales. Destacan entre ellas, las enfermedades respiratorias con una gran proporción y las causas atribuídas al sistema circualtorio con un gran índice de mortalidad.
+- En un año normal la composición de las llegadas a urgencia se compone de 5 causas generales. Destacan entre ellas, las enfermedades respiratorias con una gran proporción y las causas atribuidas al sistema circulatorio con un gran índice de mortalidad.
 
-- Las urgencias atribuídas al sistema respiratorio tienen un valor máximo muy marcado en las últimas semanas de otoño y las primeras semanas de invierno.
+- Las urgencias atribuidas al sistema respiratorio tienen un valor máximo muy marcado en las últimas semanas de otoño y las primeras semanas de invierno.
 
-- El colapso ocurrido en el año 2020 no solo afecto las llegadas a urgencia atribuídas al sistema respiratorio, sino que también afecto las causas del sistema circulatorio. Destaca entre ellas, una caída del 21% del total de atenciones de urgencia atribuídas a accidentes vasculares entre las semanas 12 y 35.
+- El colapso ocurrido en el año 2020 no solo afecto las llegadas a urgencia atribuidas al sistema respiratorio, sino que también afecto las causas del sistema circulatorio. Destaca entre ellas, una caída del 21% del total de atenciones de urgencia de accidentes vasculares entre las semanas 12 y 25.
 
 # **Conclusiones**
 
-Una vez reportados los hallazgos obtenidos, podemos concluír que nuestra red de urgencias presenta una tasa insostenible de ocupación, es decir, nuestro sistema tendería a colapsar frente a cualquier suceso que altere nuestras urgencias. La pandemia del covid-19 es un ejemplo muy claro, pero además estas altas tasas de ocupación nos dificultarían combatir ciclos marcados de enfermedades respiratorias.
+Una vez reportados los hallazgos obtenidos, podemos concluir que nuestra red de urgencias presenta una tasa insostenible de ocupación, es decir, nuestro sistema tendería a colapsar frente a cualquier suceso que altere nuestras urgencias. La pandemia del covid-19 es un ejemplo muy claro, pero además estas altas tasas de ocupación nos dificultarían combatir ciclos marcados de enfermedades respiratorias.
 
-La pandemia del covid-19 ha tenido un gran impacto en la disminución de las atenciones en la red de urgencia, pero no solo ha afectado las atenciones atribuídas al sistema respiratorio, sino que también han bajado las atenciones por causas no atribuídas a esta pandemia. Es muy preocupante la fuerte caída en las causas atribuídas al sistema circulatorio, en consecuencia, habría un grupo de pacientes que no estaría accediendo a una atención oportuna. Esta atención oportuna es vital en las enfermedades con mayor índice de mortalidad, como lo son los accidentes cardiovasculares o los infartos agudos al miocardio. Esto podría provocar un aumento en la mortalidad de la población, no solo por causas ligadas a la pandemia, sino que también por las diferentes atenciones que se dejan de otorgar.
+La pandemia del covid-19 ha tenido un gran impacto en la disminución de las atenciones en la red de urgencia, pero no solo ha afectado las atenciones atribuidas al sistema respiratorio, sino que también han bajado las atenciones por causas no relacionadas a esta pandemia. Es muy preocupante la fuerte caída en las causas atribuidas al sistema circulatorio, en consecuencia, habría un grupo de pacientes que no estaría accediendo a una atención oportuna. Esta atención oportuna es vital en las enfermedades con mayor índice de mortalidad, como lo son los accidentes cardiovasculares o los infartos agudos al miocardio. Esto podría provocar un aumento en la mortalidad de la población, no solo por causas ligadas a la pandemia, sino que también por las diferentes atenciones que se dejan de otorgar.
 
-Finalmente, se espera que este informe sirva como  punto de partida para la futura elaboración de un análisis con mayor profundidad, que permita contextualizar el problema de la red de urgencias en todas sus dimensiones. Debido a que al momento de evaluar cómo pasamos de un modelo objetivo con énfasis en las redes primarias a una realidad sobrecargada en las redes de urgencia requerirá de muchas más variables.
+Finalmente, se espera que este informe sirva como punto de partida para la futura elaboración de un análisis con mayor profundidad, que permita contextualizar el problema de la red de urgencias en todas sus dimensiones. Debido a que al momento de evaluar cómo pasamos de un modelo objetivo con énfasis en las redes primarias a una realidad sobrecargada en las redes de urgencia requerirá de muchas más variables.
 
 
 # **Referencias**
 
 (1) Berchet, C. (2015), "Emergency Care Services: Trends, Drivers and Interventions to Manage the Demand", OECD Health Working Papers, No. 83, OECD Publishing, Paris. Recuperado de: https://doi.org/10.1787/5jrts344crns-en.
 (2) "Indicadores Básicos de Salud Chile 2010 -  2014", Departamento de  Estadísticas  e  Información  de Salud, Ministerio  de Salud. Recuperado de: https://deis.minsal.cl
-(3) Yury Bustos. (2015)."Emergency department characteristics and capabilities in Bogotá, Colombia",International Journal of Emergency Medicine. Recuperado de: https://link.springer.com/article/10.1186/s12245-015-0079-y
+(3) Yury Bustos. (2015)."Emergency department characteristics and capabilities in Bogotá, Colombia", International Journal of Emergency Medicine. Recuperado de: https://link.springer.com/article/10.1186/s12245-015-0079-y
 (4) Huang CC, Yen DH, Huang HH, Kao WF, Wang LM, Huang CI. (2015)," Impact of Severe Acute Respiratory Syndrome (SARS) Outbreaks on the Use of Emergency Department Medical Resources". Recuperado de: https://pubmed.ncbi.nlm.nih.gov/15984818/
 (5) "Atenciones de Urgencia por semanas estadísticas", (2014-2020), Departamento de Estadísticas e Información de Salud, Ministerio de Salud. Recuperado de: https://deis.minsal.cl
