@@ -134,7 +134,7 @@ Una vez reportados los hallazgos obtenidos, podemos concluír que nuestra red de
 
 La pandemia del covid-19 ha tenido un gran impacto en la disminución de las atenciones en la red de urgencia, pero no solo ha afectado las atenciones atribuídas al sistema respiratorio, sino que también han bajado las atenciones por causas no atribuídas a esta pandemia. Es muy preocupante la fuerte caída en las causas atribuídas al sistema circulatorio, en consecuencia, habría un grupo de pacientes que no estaría accediendo a una atención oportuna. Esta atención oportuna es vital en las enfermedades con mayor índice de mortalidad, como lo son los accidentes cardiovasculares o los infartos agudos al miocardio. Esto podría provocar un aumento en la mortalidad de la población, no solo por causas ligadas a la pandemia, sino que también por las diferentes atenciones que se dejan de otorgar.
 
-Finalmente, se espera que este informe sirva como  punto de partida para la futura elaboración de un análisis con mayor profundidad, que permita contextualizar el problema de la red de urgencias en todas sus dimensiones. Debido a que al momento de evaluar cómo pasamos de un modelo objetivo con énfasis en las redes primarias a una realidad sobrecargada en las redes de urgencia requiere de muchas más variables.
+Finalmente, se espera que este informe sirva como  punto de partida para la futura elaboración de un análisis con mayor profundidad, que permita contextualizar el problema de la red de urgencias en todas sus dimensiones. Debido a que al momento de evaluar cómo pasamos de un modelo objetivo con énfasis en las redes primarias a una realidad sobrecargada en las redes de urgencia requerirá de muchas más variables.
 
 
 
