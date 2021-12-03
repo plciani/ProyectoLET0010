@@ -12,7 +12,7 @@ library(dplyr)
 
 
 ```
-**GERUNDIOS, DONDE **
+
 
 # **Introducción**
 
