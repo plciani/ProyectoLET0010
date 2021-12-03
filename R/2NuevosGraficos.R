@@ -137,13 +137,15 @@ ggplot(datos2,aes(x=Semana,y=`Infarto agudo miocardio`,color=Año))+
        x="Semana estadística",y="Total atenciones urgencia",
        caption="Elaboración propia con datos obtenidos desde Ministerio Salud")+
   scale_x_continuous(limit = c(0,53), breaks=c(0,10,20,30,40,50))+
-  scale_y_continuous(limit = c(0,600), breaks=c(0,100,200,300,400,500))+
+  scale_y_continuous(limit = c(0,1000), breaks=c(0,200,400,600,800,1000))+
   geom_vline(xintercept=11,
              col="deeppink",linetype = "dashed")+
-  annotate("text",x=17,y=200,
+  annotate("text",x=15,y=100,
            label="Covid-19",
            parse=TRUE,
            col="deeppink")
+
+ggsave("Plots/InfartosHD.png",height = 7,width = 10,dpi=150)
 
 datos2$`Accidente vascular encefálico`
 ggplot(datos2,aes(x=Semana,y=`Accidente vascular encefálico`,color=Año))+
